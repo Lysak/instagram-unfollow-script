@@ -7,7 +7,7 @@ for (let i = 11; i < aTags.length; i++) {
         setTimeout(function () {
             aTags[i].click();
             console.log('https://lysak.github.io/' + ' - ' + i);
-            // follow
+            // unfollow
             let searchText = "Отменить подписку";
             let found;
             let aTagsCancel = document.getElementsByTagName("button");
