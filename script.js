@@ -1,25 +1,32 @@
-let aTags = document.getElementsByTagName("button");
-
+let buttonTags = document.getElementsByTagName("button");
 let count = 1;
-for (let i = 11; i < aTags.length; i++) {
+let buttonTagsCancel = document.getElementsByTagName("button");
+let searchText = "Отменить подписку";
+let found;
+let i;
+let j;
+
+buttonTags = document.getElementsByTagName("button");
+count = 1;
+for (i = 11; i < buttonTags.length; i++) {
     (function (i) {
-        let timeToStartNote = 4000 * count;
+        let timeToStartNote = 29000 * count;
         setTimeout(function () {
-            aTags[i].click();
+            buttonTags[i].click();
             console.log('https://lysak.github.io/' + ' - ' + i);
-            // unfollow
-            let searchText = "Отменить подписку";
-            let found;
-            let aTagsCancel = document.getElementsByTagName("button");
-            for (let j = 0; j < aTagsCancel.length; j++) {
-                if (aTagsCancel[j].textContent == searchText) {
-                    found = aTagsCancel[j];
-                    aTagsCancel[j].click();
+        }, timeToStartNote);
+
+        setTimeout(function () {
+            buttonTagsCancel = document.getElementsByTagName("button");
+            for (j = 0; j < buttonTagsCancel.length; j++) {
+                if (buttonTagsCancel[j].textContent == searchText) {
+                    found = buttonTagsCancel[j];
+                    buttonTagsCancel[j].click();
                     break;
                 }
             }
-            // end unfollow
-        }, timeToStartNote);
+			console.log('unfollow');
+        }, +timeToStartNote + 1000);
     })(i);
     count++;
 }
