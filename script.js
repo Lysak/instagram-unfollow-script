@@ -20,10 +20,10 @@ for (let i = 7; i < buttonTags.length; i++) {
 
         setTimeout(function () {
             buttonTagsCancel = document.getElementsByTagName("button");
-            for (let j = 0; j < buttonTagsCancel.length; j++) {
-                if (buttonTagsCancel[j].textContent == searchText) {
-                    found = buttonTagsCancel[j];
-                    buttonTagsCancel[j].click();
+            for (let i = 0; i < buttonTagsCancel.length; i++) {
+                if (buttonTagsCancel[i].textContent == searchText) {
+                    found = buttonTagsCancel[i];
+                    buttonTagsCancel[i].click();
                     break;
                 }
             }
