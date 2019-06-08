@@ -15,7 +15,6 @@ for (let i = 7; i < buttonTags.length; i++) {
             if (i % 10) {
                 console.log('https://lysak.github.io/' + ' - ' + (i - 6));
             }
-            
         }, timeToStart);
 
         setTimeout(function () {
