@@ -13,7 +13,7 @@ for (let i = 7; i < buttonTags.length; i++) {
         setTimeout(function () {
             buttonTags[i].click();
             if (i % 10) {
-                console.log('https://lysak.github.io/' + ' - ' + i);
+                console.log('https://lysak.github.io/' + ' - ' + (i - 6));
             }
             
         }, timeToStart);
@@ -28,7 +28,7 @@ for (let i = 7; i < buttonTags.length; i++) {
                 }
             }
 			console.log('unfollow ' + new Date().toISOString().replace(/T|Z|\.\d{3}/g, ' ').trim());
-        }, +timeToStart + 1000);
+        }, timeToStart + 1000);
     })(i);
     count++;
 }
