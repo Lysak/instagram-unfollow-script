@@ -9,7 +9,7 @@ searchText = "Отменить подписку";
 
 for (let i = 7; i < buttonTags.length; i++) {
     (function (i) {
-        let timeToStart = (count === 1 ? 1000 : 44000) * count;
+        let timeToStart = (count === 1 ? 1000 : 45000) * count;
         setTimeout(function () {
             buttonTags[i].click();
             if (i % 10) {
