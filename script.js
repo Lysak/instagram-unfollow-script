@@ -1,5 +1,5 @@
 if (typeof buttonTags === 'undefined') {
-    let buttonTags, count, buttonTagsCancel, searchText, found;
+    let buttonTags, count, buttonTagsCancel, searchText, found, tmp;
 }
 
 buttonTags = document.getElementsByTagName("button");
@@ -13,7 +13,7 @@ for (let i = 7; i < buttonTags.length; i++) {
         setTimeout(function () {
             buttonTags[i].click();
             if (i % 10) {
-                console.log('https://lysak.github.io/' + ' - ' + (i - 6));
+                tmp = ('#' + (i - 6) + ' - ' + 'https://lysak.github.io/');
             }
         }, timeToStart);
 
@@ -26,7 +26,7 @@ for (let i = 7; i < buttonTags.length; i++) {
                     break;
                 }
             }
-            console.log('unfollow ' + new Date().toLocaleTimeString());
+            console.log('unfollow ' + new Date().toLocaleTimeString() + ' ' + tmp);
         }, timeToStart + 1000);
     })(i);
     count++;
